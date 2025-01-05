@@ -14,6 +14,8 @@ This pipeline utilized bam files of PacBio Hifi long-read sequencing data from 6
 2. Reference genome FASTA files for CanFam3.1 were downloaded from Ensembl.
 3. A pbmm2 index was built from the reference genome files.
 4. pbmm2 was used to perform alignment of HiFi reads to the reference genome.
+5. pbsv discover was used to identify signatures of structural variation.
+6. pbsv call was used to call structural variants from structural variant signature and assign genotypes.
 ### Sample information
 | **Sample #**| **Barcode** | **Sex**| **Breed** | **Tissue** | **Age (yrs.)**| **Barcode Quality**| **HiFi Reads** | **HiFi Yield (GB)**| **HiFi Read Length (mean, bp)** | **HiFi Read Quality (median, QV)**|
 |:-----------:|:-----------:|:------:|:---------:|:----------:|:-------------:|:------------------:|:--------------:|:------------------:|:-------------------------------:|:---------------------------------:|
