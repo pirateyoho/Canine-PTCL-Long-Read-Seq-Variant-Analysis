@@ -15,5 +15,5 @@ pbsv --version
 for file in $(ls ../output/*.aligned.bam)
 do
 name=$(basename ${file} .aligned.bam); echo ${name}
-pbsv discover ${file} ${name}.svsig.gz
+pbsv discover ${file} ../output/${name}.svsig.gz
 done
