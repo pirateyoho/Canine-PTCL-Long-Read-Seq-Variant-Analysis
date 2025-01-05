@@ -15,11 +15,11 @@ This pipeline utilized bam files of PacBio Hifi long-read sequencing data from 6
 3. A pbmm2 index was built from the reference genome files.
 4. pbmm2 was used to perform alignment of HiFi reads to the reference genome.
 ### Sample information
-| **Sample #**| **Barcode** | **Sex**| **Breed** | **Tissue** | **Age (mos.)**| **Barcode Quality**| **HiFi Reads** | **HiFi Yield (GB)**| **HiFi Read Length (mean, bp)** | **HiFi Read Quality (median, QV)**|
+| **Sample #**| **Barcode** | **Sex**| **Breed** | **Tissue** | **Age (yrs.)**| **Barcode Quality**| **HiFi Reads** | **HiFi Yield (GB)**| **HiFi Read Length (mean, bp)** | **HiFi Read Quality (median, QV)**|
 |:-----------:|:-----------:|:------:|:---------:|:----------:|:-------------:|:------------------:|:--------------:|:------------------:|:-------------------------------:|:---------------------------------:|
-| 152139      | bc2014      | MC     | SPRSP     | Lymph node | 8             | 97.1               | 3,735,101      | 28.0               | 7,507                           | Q37                               |
-| 152256      | bc2015      | MC     | HUS       | Lymph node | 8             | 96.9               | 3,474,221      | 23.1               | 6,660                           | Q38                               |
-| 149695      | bc2013      | FS     | OESD      | Lymph node | 9             | 96.9               | 5,733,070      | 32.2               | 5,614                           | Q40                               |
-| 166393      | bc2018      | MC     | BOX       | Lymph node | 9             | 97.4               | 3,766,001      | 25.0               | 6,639                           | Q39                               |
-| 154958      | bc2016      | MC     | MIX       | Lymph node | 7             | 96.9               | 3,833,417      | 26.8               | 6,989                           | Q37                               |
-| 154980      | bc2017      | MC     | SHTZ      | Lymph node | 7             | 97                 | 3,715,223      | 28.0               | 7,553                           | Q37                               |
+| 152139      | bc2014      | MC     | SPRSP     | Lymph node | 6             | 97.1               | 3,735,101      | 28.0               | 7,507                           | Q37                               |
+| 152256      | bc2015      | MC     | HUS       | Lymph node | 4             | 96.9               | 3,474,221      | 23.1               | 6,660                           | Q38                               |
+| 149695      | bc2013      | FS     | OESD      | Lymph node | 4             | 96.9               | 5,733,070      | 32.2               | 5,614                           | Q40                               |
+| 166393      | bc2018      | MC     | BOX       | Lymph node | 7             | 97.4               | 3,766,001      | 25.0               | 6,639                           | Q39                               |
+| 154958      | bc2016      | MC     | MIX       | Lymph node | 8             | 96.9               | 3,833,417      | 26.8               | 6,989                           | Q37                               |
+| 154980      | bc2017      | MC     | SHTZ      | Lymph node | 9             | 97                 | 3,715,223      | 28.0               | 7,553                           | Q37                               |
