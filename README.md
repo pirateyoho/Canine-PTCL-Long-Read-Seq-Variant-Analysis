@@ -11,7 +11,7 @@ This pipeline utilized bam files of PacBio Hifi long-read sequencing data from 6
 "M:\CHLab data\Sequencing Data\250102_CD4PTCL_PacBioLongReadSeq_Owens"
 ## Pipeline overview
 1. Raw data was transferred from the Nas drive to a scratch directory on CURC Alpine HPC with FileZilla.
-2. pbmm2 version 1.14.99 and pbsv version 2.9.0 were installed into a conda environment.
+2. pbmm2 version 1.14.99, pbsv version 2.9.0, and bcftools version 1.21 were installed into a conda environment.
 3. Reference genome FASTA files for CanFam3.1 were downloaded from Ensembl.
 4. A pbmm2 index was built from the reference genome files.
 5. pbmm2 was used to perform alignment of HiFi reads to the reference genome.
