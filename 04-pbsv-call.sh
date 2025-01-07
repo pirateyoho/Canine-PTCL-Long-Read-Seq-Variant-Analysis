@@ -16,4 +16,4 @@ pbsv --version
 infiles=$(ls ../output/*.svsig.gz)
 
 # Run pbsv call jointly for all samples of interest
-pbsv call --ccs Canis_lupus_familiaris.CanFam3.1.dna.toplevel.fa ${infiles} ../output/ptcl_large_structural_variants_ccs.vcf
+pbsv call --ccs Canis_lupus_familiaris.CanFam3.1.dna.toplevel.fa ${infiles} ../output/PTCL_StructuralVariants_CanFam3.vcf
