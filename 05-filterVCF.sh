@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Remove variants that failed pbsv filters
-bcftools view -i 'FILTER="PASS"' ../output/ptcl_large_structural_variants_ccs.vcf > ../output/ptcl_large_structural_variants_ccs.pass.vcf
+bcftools view -i 'FILTER="PASS"' ../output/PTCL_StructuralVariants_CanFam3.vcf.vcf > ../output/PTCL_StructuralVariants_CanFam3.vcf.pass.vcf
 
 # Create vcf file of only breakend variant calls
-bcftools view -i 'INFO/SVTYPE=="BND"' ../output/ptcl_large_structural_variants_ccs.pass.vcf > ../output/ptcl_BND_variants_ccs.pass.vcf
+bcftools view -i 'INFO/SVTYPE=="BND"' ../output/PTCL_StructuralVariants_CanFam3.vcf.pass.vcf > ../output/PTCL_BND_Variants.pass.vcf
