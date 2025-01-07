@@ -17,5 +17,5 @@ infiles="../data/EO-125_CH149695-CH166393_Pooled_HiFi_300pM-Cell7/6722_import-da
 for file in $infiles
 do
 name=$(basename "${file}" | awk -F'.' '{print $(NF-1)}'); echo ${name}
-pbmm2 align --num-threads 24 CanFam31.mmi ${file} ../output/${name}.aligned.bam --preset SUBREAD
+pbmm2 align --num-threads 24 CanFam31.mmi ${file} ../output/${name}.aligned.bam --preset HIFI
 done
