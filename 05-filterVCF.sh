@@ -2,7 +2,7 @@
 #SBATCH --job-name=filterVCF
 #SBATCH --nodes=1
 #SBATCH --ntasks=16
-#SBATCH --time=1:00:00
+#SBATCH --time=0:10:00
 #SBATCH --mail-type=BEGIN,END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=edlarsen@colostate.edu
 #SBATCH --output=filterVCF_log_%j.txt
