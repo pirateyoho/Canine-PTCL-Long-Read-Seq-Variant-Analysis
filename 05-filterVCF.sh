@@ -30,6 +30,6 @@ bcftools view -i 'INFO/BCSQ!=""' ../../output/PTCL_StructuralVariants_CanFam3.fi
 
 ######## Create vcf file of only breakend variant calls ########
 # Of all SVs that passed filtering
-bcftools view -i 'INFO/SVTYPE=="BND"' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.vcf -o ../../output/PTCL_BND_Variants.filtered.ann.vcf
+bcftools view -i 'INFO/SVTYPE=="BND"' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.vcf -o ../../output/PTCL_BND_Variants.CanFam3.filtered.ann.vcf
 # Of only SVs that impact genes
-bcftools view -i 'INFO/SVTYPE=="BND"' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.bcsq.vcf -o ../../output/PTCL_BND_Variants.filtered.ann.bcsq.vcf
+bcftools view -i 'INFO/SVTYPE=="BND"' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.bcsq.vcf -o ../../output/PTCL_BND_Variants.CanFam3.filtered.ann.bcsq.vcf
