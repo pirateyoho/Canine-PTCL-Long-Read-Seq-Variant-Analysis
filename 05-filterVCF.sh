@@ -29,7 +29,7 @@ gunzip Canis_lupus_familiaris.CanFam3.1.104.gff3.gz
 bcftools view -i 'INFO/BCSQ!=""' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.vcf -o ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.bcsq.vcf
 
 ######## Create vcf file of only breakend variant calls ########
-# Of all variants that passed filtering
+# Of all SVs that passed filtering
 bcftools view -i 'INFO/SVTYPE=="BND"' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.vcf -o ../../output/PTCL_BND_Variants.filtered.ann.vcf
-# Of only variants that impact genes
+# Of only SVs that impact genes
 bcftools view -i 'INFO/SVTYPE=="BND"' ../../output/PTCL_StructuralVariants_CanFam3.filtered.ann.bcsq.vcf -o ../../output/PTCL_BND_Variants.filtered.ann.bcsq.vcf
