@@ -2,7 +2,7 @@
 ## Background
 This repository contains scripts that were used for calling large structural variants in PacBio HiFi long-read sequencing of DNA from caine periphreal T-cell lymphoma (PTLC) samples. This repository is intended for internal use by members of the Clinical Hematopathology Laboratory at Colorado State University and their collaborators. 
 ## References
-These scripts were adapted from the pbmm2 (https://github.com/PacificBiosciences/pbmm2) and pbsv (https://github.com/PacificBiosciences/pbsv) documentation.
+Adapted from the pbmm2 (https://github.com/PacificBiosciences/pbmm2) and pbsv (https://github.com/PacificBiosciences/pbsv) documentation.
 ## Raw data
 This pipeline utilized bam files of PacBio Hifi long-read sequencing data from 6 canine PTCL samples. This data is available from the Avery lab Nas shared drive:
 "M:\CHLab data\Sequencing Data\250102_CD4PTCL_PacBioLongReadSeq_Owens"
