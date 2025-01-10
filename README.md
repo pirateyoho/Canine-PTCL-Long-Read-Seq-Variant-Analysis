@@ -11,6 +11,7 @@ A conda (version 23.7.4) environment containing the following packages:
 * pbmm2 version 1.14.99
 * pbsv version 2.9.0
 * bcftools version 1.21
+* pysam version 0.22.1
 ## Pipeline overview
 1. Download reference genome FASTA files for CanFam3.1 and CanFam4 from Ensembl.
 2. Build an index of the reference genome with *pbmm2 index*.
