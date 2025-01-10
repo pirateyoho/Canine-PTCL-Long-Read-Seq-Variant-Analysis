@@ -17,7 +17,7 @@ A conda (version 23.7.4) environment containing the following packages:
 2. Build an index of the reference genome with *pbmm2 index*.
 3. Align HiFi reads to reference genome with *pbmm2 align*.
 4. Identify signatures of structural variation with *pbsv discover*.
-5. Call structural variants from structural variant signatures and assigns genotypes with *pbsv call*.
+5. Call structural variants from structural variant signatures and assign genotypes with *pbsv call*.
 6. Filter and annotate variant calls with *svpack* and *bcftools*.
 7. Final output: Filtered and annotated structural variant VCF files.
 ### Sample information
