@@ -6,14 +6,19 @@ Adapted from the pbmm2 (https://github.com/PacificBiosciences/pbmm2) and pbsv (h
 ## Raw data
 This pipeline utilized bam files of PacBio Hifi long-read sequencing data from 6 canine PTCL samples. This data is available from the Avery lab Nas shared drive:
 "M:\CHLab data\Sequencing Data\250102_CD4PTCL_PacBioLongReadSeq_Owens"
+## Software
+A conda (version 23.7.4) environment containing the following packages:
+* pbmm2 version 1.14.99
+* pbsv version 2.9.0
+* bcftools version 1.21
 ## Pipeline overview
-1. Raw data was transferred from the Nas drive to a scratch directory on CURC Alpine HPC with FileZilla.
-2. pbmm2 version 1.14.99, pbsv version 2.9.0, and bcftools version 1.21 were installed into a conda environment.
-3. Reference genome FASTA files for CanFam3.1 were downloaded from Ensembl.
-4. A pbmm2 index was built from the reference genome files.
-5. pbmm2 was used to perform alignment of HiFi reads to the reference genome.
-6. pbsv discover was used to identify signatures of structural variation.
-7. pbsv call was used to call structural variants from structural variant signature and assign genotypes.
+1. Download reference genome FASTA files for CanFam3.1 and CanFam4 from Ensembl.
+2. Build an index of the reference genome with *pbmm2 index*.
+3. Align HiFi reads to reference genome with *pbmm2 align*.
+4. Identify signatures of structural variation with *pbsv discover*.
+5. Call structural variants from structural variant signatures and assigns genotypes with *pbsv call*.
+6. Filter and annotate variant calls with *svpack* and *bcftools*.
+7. Final output: Filtered and annotated structural variant VCF files.
 ### Sample information
 | **Sample #**| **Barcode** | **Sex**| **Breed** | **Tissue** | **Age (yrs.)**| **Barcode Quality**| **HiFi Reads** | **HiFi Yield (GB)**| **HiFi Read Length (mean, bp)** | **HiFi Read Quality (median, QV)**|
 |:-----------:|:-----------:|:------:|:---------:|:----------:|:-------------:|:------------------:|:--------------:|:------------------:|:-------------------------------:|:---------------------------------:|
