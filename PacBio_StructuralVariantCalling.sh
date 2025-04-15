@@ -3,7 +3,7 @@
 #SBATCH --job-name=PacBioSV
 #SBATCH --nodes=1
 #SBATCH --ntasks=24
-#SBATCH --time=12:00:00
+#SBATCH --time=23:55:00
 #SBATCH --mail-type=BEGIN,END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=edlarsen@colostate.edu
 #SBATCH --output=PacBioSV_log_%j.txt
