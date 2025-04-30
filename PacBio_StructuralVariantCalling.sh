@@ -49,8 +49,8 @@ infiles="../data/EO-125_CH149695-CH166393_Pooled_HiFi_300pM-Cell7/6722_import-da
 for file in $infiles
 do
 name=$(basename "${file}" | awk -F'.' '{print $(NF-1)}'); echo ${name}
-pbmm2 align CanFam31.mmi ${file} ../output/${name}.CanFam3.aligned.bam --preset HIFI --sort --j 16 -J 8 --sample ${name}
-pbmm2 align CanFam4.mmi ${file} ../output/${name}.CanFam4.aligned.bam --preset HIFI --sort --j 16 -J 8 --sample ${name}
+pbmm2 align CanFam31.mmi ${file} ../output/${name}.CanFam3.aligned.bam --preset HIFI --sort --j 16 -J 8 --log-level INFO --sample ${name}
+pbmm2 align CanFam4.mmi ${file} ../output/${name}.CanFam4.aligned.bam --preset HIFI --sort --j 16 -J 8 --log-level INFO --sample ${name}
 done
 
 echo "pbmm2 steps completed"
