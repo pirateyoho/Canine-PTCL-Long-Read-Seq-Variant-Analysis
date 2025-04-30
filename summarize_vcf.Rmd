@@ -262,10 +262,6 @@ write.csv(shared_bnd_Cfam4, file = "shared_PacBio_STARFusion_calls.CanFam4.csv")
 
 # Identify structural variants implicating cancer-associated genes
 ```{r}
-# import vcf file of only variants with a BCSQ tag in the INFO field
-ann_vcf_Cfam3 <- read.csv("PTCL_StructuralVariants_CanFam3.filtered.ann.bcsq.csv")
-ann_vcf_Cfam4 <- read.csv("PTCL_StructuralVariants_CanFam4.filtered.ann.bcsq.csv")
-
 # list of cancer-associated genes from OncoKB
 oncokb <- read.csv("cancerGeneList.csv")
 oncokb_genes <- oncokb$Hugo.Symbol
@@ -281,13 +277,13 @@ extract_gene <- function(info) {
   return(NA)
 }
 
-onco_vcf_Cfam3 <- ann_vcf_Cfam3 %>%
+onco_vcf_Cfam3 <- vcf_Cfam3 %>%
   mutate(Gene = sapply(INFO, extract_gene))
 
 onco_vcf_Cfam3 <- onco_vcf_Cfam3 %>%
   filter(Gene %in% oncokb_genes)
 
-onco_vcf_Cfam4 <- ann_vcf_Cfam4 %>%
+onco_vcf_Cfam4 <- vcf_Cfam4 %>%
   mutate(Gene = sapply(INFO, extract_gene))
 
 onco_vcf_Cfam4 <- onco_vcf_Cfam4 %>%
@@ -323,12 +319,12 @@ extract_variant_type <- function(info) {
   return(NA)
 }
 
-Cfam3_vcf_alt <- ann_vcf_Cfam3 %>%
+Cfam3_vcf_alt <- vcf_Cfam3 %>%
   mutate(Gene = sapply(INFO, extract_gene))
 Cfam3_vcf_alt <- Cfam3_vcf_alt %>%
   mutate(SVTYPE = sapply(INFO, extract_variant_type))
 
-Cfam4_vcf_alt <- ann_vcf_Cfam4 %>%
+Cfam4_vcf_alt <- vcf_Cfam4 %>%
   mutate(Gene = sapply(INFO, extract_gene))
 Cfam4_vcf_alt <- Cfam4_vcf_alt %>%
   mutate(SVTYPE = sapply(INFO, extract_variant_type))
